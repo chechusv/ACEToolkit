@@ -1,0 +1,45 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "title" : "DemoGit01",
+    "version" : "1.0.0",
+    "description" : "DemoGit01"
+  },
+  "paths" : {
+    "/demo/{param01}" : {
+      "get" : {
+        "operationId" : "getParam01",
+        "responses" : {
+          "200" : {
+            "description" : "The operation was successful.",
+            "schema" : {
+              "$ref" : "#/definitions/resp01"
+            }
+          }
+        },
+        "produces" : [ "application/json" ],
+        "description" : "Retrieve param01",
+        "parameters" : [ {
+          "required" : true,
+          "name" : "param01",
+          "in" : "path",
+          "type" : "string"
+        } ]
+      }
+    }
+  },
+  "basePath" : "/demogit01/v1",
+  "definitions" : {
+    "resp01" : {
+      "type" : "object",
+      "properties" : {
+        "element1" : {
+          "type" : "string"
+        },
+        "element2" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
